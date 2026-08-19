@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · SNTWET 离线翻译 | Privacy Policy · SNTWET Offline Translator</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1c1c1e; --muted:#6b6b70; --line:#e3e3e8;
+    --accent:#1f5fd0; --card:#f6f7f9; --warn:#8a5a00; --warnbg:#fff8e6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#111114; --fg:#ececf0; --muted:#a0a0a8; --line:#2c2c33;
+           --accent:#7aa7ff; --card:#1a1a1f; --warn:#e9c46a; --warnbg:#2a2411; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px; line-height:1.75;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:28px 20px 72px}
+  header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:26px}
+  h1{font-size:1.5rem;line-height:1.35;margin:0 0 10px}
+  h2{font-size:1.15rem;margin:34px 0 10px;padding-top:6px;border-top:1px solid var(--line)}
+  h3{font-size:1rem;margin:20px 0 6px}
+  p,li{margin:0 0 10px}
+  ul,ol{padding-left:1.3em;margin:0 0 12px}
+  .meta{color:var(--muted);font-size:.9rem;margin:0}
+  .lang{display:inline-block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+        color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin:26px 0 4px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+       background:var(--card);padding:1px 5px;border-radius:4px;word-break:break-all}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0}
+  .note{background:var(--warnbg);border:1px solid var(--line);border-left:4px solid var(--warn);
+        border-radius:8px;padding:12px 16px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem;display:block;overflow-x:auto}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--card);white-space:nowrap}
+  a{color:var(--accent)}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>隐私政策 — SNTWET 离线翻译<br><span style="font-weight:600;font-size:.92em">Privacy Policy — SNTWET Offline Translator</span></h1>
+  <p class="meta">
+    应用标识 App Bundle ID: <code>com.shenzhenbo.OfflineTranslator</code><br>
+    开发者 Developer: Zhenbo Shen (沈振波), 个人开发者 / individual developer<br>
+    联系邮箱 Contact: <a href="mailto:sntwet@gmail.com">sntwet@gmail.com</a><br>
+    生效日期 Effective: 2026-08-18 &nbsp;|&nbsp; 最近更新 Last updated: 2026-08-18
+  </p>
+</header>
+
+<span class="lang">中文</span>
+
+<h2>一、一句话概括</h2>
+<p>本应用<strong>不设账号、不要求注册、不收集任何可识别您身份的信息</strong>，没有广告，没有任何分析或追踪组件。开发者<strong>不运营任何服务器</strong>，因此开发者收不到您的任何数据。相机画面、照片与译文<strong>只在您的设备上处理</strong>，不会发送给任何第三方翻译服务。唯一一种可能让数据离开设备的情况是语音识别的系统回落，第三节把它说清楚，不做粉饰。</p>
+
+<h2>二、权限说明：为什么要，用来做什么</h2>
+<table>
+  <tr><th>权限</th><th>何时请求</th><th>用途与边界</th></tr>
+  <tr>
+    <td>相机<br>Camera</td>
+    <td>首次打开应用主界面（取景翻译是本应用首页功能）</td>
+    <td>用于实时取景与拍照，识别画面中的文字。<strong>文字识别在设备本机完成</strong>；相机画面<strong>不上传、不保存、不写入相册</strong>，翻译完成即丢弃。</td>
+  </tr>
+  <tr>
+    <td>麦克风<br>Microphone</td>
+    <td>仅当您主动进入“语音”页并按下录音按钮时</td>
+    <td>用于录下您要翻译的话。录音仅用于本次转写，<strong>不保存为文件、不上传给开发者</strong>。</td>
+  </tr>
+  <tr>
+    <td>语音识别<br>Speech Recognition</td>
+    <td>与麦克风同时，仅在您按下录音按钮时</td>
+    <td>用于把录音转成文字。详见第三节——<strong>并非所有语言都能在设备上完成识别</strong>。</td>
+  </tr>
+  <tr>
+    <td>照片<br>Photos</td>
+    <td>不请求</td>
+    <td>从相册选图使用 iOS 系统的照片选择器（在应用进程之外运行）。本应用<strong>无法浏览您的相册</strong>，只能拿到您亲手选中的那一张图；也不会把任何内容写回相册。</td>
+  </tr>
+</table>
+
+<h2>三、语音识别：什么时候在设备上，什么时候不在</h2>
+<p>本应用在开始识别前会检查所选语言是否支持<strong>设备端识别</strong>：</p>
+<ul>
+  <li>若支持：应用会<strong>强制要求设备端识别</strong>（<code>requiresOnDeviceRecognition = true</code>），录音内容不会离开您的设备。</li>
+  <li>若<strong>不</strong>支持该语言的设备端识别：识别将由 <strong>Apple 的系统语音识别服务</strong>完成，这意味着音频会按 Apple 的处理方式发送至 Apple 的服务器。此过程由 iOS 系统负责，本应用不接触、不留存这些音频，开发者也拿不到它。Apple 对语音识别数据的处理适用 Apple 自己的隐私政策。</li>
+</ul>
+<p>是否支持设备端识别取决于语言、机型与您在系统“设置 &gt; 通用 &gt; 键盘 &gt; 听写”中已下载的听写语言，本应用无法替您决定。</p>
+
+<h2>四、翻译引擎（全部在设备上运行）</h2>
+<p>本应用的翻译按以下顺序尝试，全部尝试完才返回结果：</p>
+<ol>
+  <li><strong>内置专业术语库</strong>（随应用一起安装，1117 条工程机械与 IT 术语对照）。完全离线，不联网。</li>
+  <li><strong>Apple Intelligence 设备端语言模型</strong>（需 iOS 26 且机型与系统开关支持）。在设备上运行，不联网。</li>
+  <li><strong>iOS 系统翻译框架</strong>（Apple Translation）。下载语言包之后完全离线运行。<strong>语言包本身由 iOS 系统下载与管理</strong>，首次使用某个语言对时需要联网下载一次；下载动作由系统发起，本应用不经手，也没有自建的下载服务器。</li>
+</ol>
+
+<div class="note">
+  <p style="margin:0"><strong>没有第三方翻译服务。</strong>本应用<strong>不向任何第三方翻译服务发送您的文字</strong>。上述三档全部在您的设备上运行；应用中不存在把待翻译内容发往外部翻译接口的代码路径。</p>
+</div>
+
+<h2>五、保存在您设备上的数据</h2>
+<p>本应用只在本地保存少量偏好设置（源语言与目标语言的选择），使用 iOS 的 <code>NSUserDefaults</code>。<strong>不保存翻译历史、不保存录音、不保存照片。</strong>删除应用即删除全部本地数据。</p>
+
+<h2>六、不做的事</h2>
+<ul>
+  <li>不设账号、不要求注册、不收集姓名／邮箱／手机号。</li>
+  <li>不集成广告 SDK、分析 SDK 或崩溃上报 SDK；不读取 IDFA／广告标识符。</li>
+  <li>不进行 App Store 隐私定义中的“追踪（Tracking）”。</li>
+  <li>不访问通讯录、日历、定位、健康数据。</li>
+  <li>不把您的翻译内容、录音或照片出售、出租或提供给任何人。</li>
+</ul>
+
+<h2>七、儿童隐私</h2>
+<p>本应用不面向 13 岁以下儿童设计，也不会有意收集儿童信息（本应用不收集任何人的身份信息）。</p>
+
+<h2>八、您的权利与联系方式</h2>
+<p>开发者不持有您的任何数据，因此没有可供查询或删除的服务器端记录；删除应用即彻底清除本机数据。任何疑问请发邮件至 <a href="mailto:sntwet@gmail.com">sntwet@gmail.com</a>。</p>
+
+<h2>九、政策变更</h2>
+<p>本政策如有实质性变更，将更新本页顶部的“最近更新”日期。</p>
+
+<span class="lang">English</span>
+
+<h2>1. In one sentence</h2>
+<p>This app has <strong>no accounts, no registration and collects no personally identifiable information</strong>. It contains no advertising and no analytics or tracking components. The developer <strong>runs no servers</strong>, so the developer receives none of your data. Camera frames, photos and translations are processed <strong>on your device</strong> and are never sent to a third-party translation service. The one case in which data can leave the device is the system speech-recognition fallback, which section 3 spells out plainly.</p>
+
+<h2>2. Permissions: what is requested and why</h2>
+<table>
+  <tr><th>Permission</th><th>When requested</th><th>Purpose and limits</th></tr>
+  <tr>
+    <td>Camera</td>
+    <td>When the main screen first opens (live camera translation is the app's home screen)</td>
+    <td>Used for the live viewfinder and still capture, to recognise text in the frame. <strong>Text recognition runs on the device.</strong> Camera frames are <strong>never uploaded, never saved and never written to your photo library</strong>; they are discarded after translation.</td>
+  </tr>
+  <tr>
+    <td>Microphone</td>
+    <td>Only when you open the Voice screen and press the record button</td>
+    <td>Records the speech you want translated. The recording is used for that single transcription only; it is <strong>not saved as a file and never sent to the developer</strong>.</td>
+  </tr>
+  <tr>
+    <td>Speech Recognition</td>
+    <td>Together with the microphone, only when you press record</td>
+    <td>Converts your recording into text. See section 3 — <strong>not every language can be recognised on device</strong>.</td>
+  </tr>
+  <tr>
+    <td>Photos</td>
+    <td>Not requested</td>
+    <td>Choosing an image uses the system photo picker, which runs outside this app's process. The app <strong>cannot browse your library</strong>; it receives only the single image you pick, and never writes anything back to your library.</td>
+  </tr>
+</table>
+
+<h2>3. Speech recognition: when it stays on device, and when it does not</h2>
+<p>Before recognition starts, the app checks whether the selected language supports <strong>on-device recognition</strong>:</p>
+<ul>
+  <li>If it does, the app <strong>forces on-device recognition</strong> (<code>requiresOnDeviceRecognition = true</code>) and the audio never leaves your device.</li>
+  <li>If it does <strong>not</strong>, recognition is performed by <strong>Apple's system speech recognition service</strong>, which means audio is sent to Apple's servers as part of that system service. This is handled by iOS; the app neither touches nor retains that audio, and the developer never receives it. Apple's own privacy policy governs how Apple processes speech recognition data.</li>
+</ul>
+<p>Whether on-device recognition is available depends on the language, the device model, and the dictation languages you have downloaded in Settings &gt; General &gt; Keyboard &gt; Dictation. The app cannot change this on your behalf.</p>
+
+<h2>4. Translation engines (all on device)</h2>
+<p>Translation is attempted in the following order:</p>
+<ol>
+  <li><strong>Built-in terminology glossary</strong> (installed with the app; 1,117 machinery and IT term pairs). Fully offline.</li>
+  <li><strong>Apple Intelligence on-device language model</strong> (requires iOS 26 and a supported device with the feature enabled). Runs on device, no network.</li>
+  <li><strong>The iOS system translation framework</strong> (Apple Translation). Fully offline once the language pack is installed. <strong>Language packs are downloaded and managed by iOS itself</strong>, which requires a one-time internet connection the first time you use a language pair. That download is initiated by the system; the app does not handle it and there is no download server operated by the developer.</li>
+</ol>
+
+<div class="note">
+  <p style="margin:0"><strong>There is no third-party translation service.</strong> This app <strong>never sends your text to any third-party translation service</strong>. All three tiers above run on your device; no code path exists in the app that would send translatable content to an external translation endpoint.</p>
+</div>
+
+<h2>5. Data stored on your device</h2>
+<p>The app stores only a couple of preferences locally (your source and target language selection) using <code>NSUserDefaults</code>. <strong>No translation history, no recordings and no photos are stored.</strong> Deleting the app removes all local data.</p>
+
+<h2>6. What this app does not do</h2>
+<ul>
+  <li>No accounts, no registration, no collection of name, email or phone number.</li>
+  <li>No advertising SDK, analytics SDK or crash-reporting SDK; the IDFA is never read.</li>
+  <li>No "Tracking" as defined by Apple's App Privacy framework.</li>
+  <li>No access to contacts, calendar, location or health data.</li>
+  <li>Your translations, recordings and photos are never sold, rented or handed to anyone.</li>
+</ul>
+
+<h2>7. Children's privacy</h2>
+<p>This app is not directed to children under 13 and does not knowingly collect information from children — it collects identity information from no one.</p>
+
+<h2>8. Your rights and how to reach us</h2>
+<p>The developer holds none of your data, so there is no server-side record to access or delete; deleting the app erases everything locally. For any question, write to <a href="mailto:sntwet@gmail.com">sntwet@gmail.com</a>.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>Material changes will be reflected in the "Last updated" date at the top of this page.</p>
+
+<footer>
+  © 2026 Zhenbo Shen (沈振波). SNTWET is a product brand of the individual developer.<br>
+  Contact / 联系: <a href="mailto:sntwet@gmail.com">sntwet@gmail.com</a>
+</footer>
+
+</div>
+</body>
+</html>
