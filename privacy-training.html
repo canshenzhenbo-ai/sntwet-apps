@@ -64,7 +64,7 @@
 <ul>
   <li>应用安装包内含全部课程数据与题库；发音由 iOS 系统内置的语音合成（朗读）在本机实时生成，安装包内<strong>不含任何音频文件</strong>。学习过程无需网络。</li>
   <li>应用的网络请求层是<strong>本地模拟实现</strong>，不含任何真实的网络调用（无 HTTP 请求、无 WebSocket）。</li>
-  <li>应用界面由内嵌的 <code>WKWebView</code> 呈现，其内容通过<strong>自定义的本地资源协议</strong>从安装包内读取。该 WebView 明确<strong>拒绝导航到任何外部网址</strong>——凡是非本地协议的跳转一律被拦截，用户无法通过本应用浏览互联网。</li>
+  <li>应用界面由内嵌的 <code>WKWebView</code> 呈现，其内容通过<strong>自定义的本地资源协议</strong>从安装包内读取。该 WebView <strong>只加载安装包内的本地内容</strong>——任何指向外部网址的跳转都不会在应用内打开；其中 http/https 链接（例如本隐私政策全文）会交给系统浏览器打开，其余协议一律拒绝。应用本身不提供浏览互联网的功能。</li>
   <li>应用<strong>不申请</strong>麦克风、相机、通讯录、日历、定位、照片或健康权限。</li>
 </ul>
 <div class="note">
@@ -114,7 +114,7 @@
 <ul>
   <li>The installed app bundle contains all course data and quiz content; pronunciation is produced on the device by the iOS built-in speech synthesis service, and the bundle contains <strong>no audio files at all</strong>. Studying requires no network.</li>
   <li>The app's network layer is a <strong>local mock implementation</strong> containing no real network calls (no HTTP requests, no WebSockets).</li>
-  <li>The interface is rendered in an embedded <code>WKWebView</code> whose content is read from inside the app bundle through a <strong>custom local resource scheme</strong>. That WebView explicitly <strong>refuses navigation to any external URL</strong> — any non-local scheme is cancelled, so the app cannot be used to browse the internet.</li>
+  <li>The interface is rendered in an embedded <code>WKWebView</code> whose content is read from inside the app bundle through a <strong>custom local resource scheme</strong>. That WebView <strong>loads only local content from inside the app bundle</strong> — no external URL is ever opened inside the app. http/https links (such as the full text of this privacy policy) are handed to the system browser instead; every other scheme is refused. The app itself provides no way to browse the internet.</li>
   <li>The app requests <strong>no</strong> microphone, camera, contacts, calendar, location, photo library or health permissions.</li>
 </ul>
 <div class="note">
