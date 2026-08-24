@@ -115,21 +115,28 @@
 <span class="lang">English</span>
 
 <h2>1. In one sentence</h2>
-<p>This is a <strong>fully offline</strong> industry-English learning app. All lesson text and quiz content are installed on your device together with the app; pronunciation is generated on your device at playback time by the iOS built-in speech synthesis (text-to-speech) service, and the app bundle contains no audio files. There is <strong>no server, no account and nothing is uploaded</strong>; your learning records exist only on your own phone.</p>
+<p>This is a <strong>fully offline</strong> industry-English learning app. All lesson text and quiz content are installed on your device together with the app; pronunciation is generated on your device at playback time by the iOS built-in speech synthesis (text-to-speech) service, and the app bundle contains no audio files. Pronunciation scoring uses iOS <strong>on-device speech recognition</strong>; recordings are never saved or uploaded. There is <strong>no server, no account and nothing is uploaded</strong>; your learning records exist only on your own phone.</p>
 
 <h2>2. Fully offline: verifiable facts</h2>
 <ul>
   <li>The installed app bundle contains all course data and quiz content; pronunciation is produced on the device by the iOS built-in speech synthesis service, and the bundle contains <strong>no audio files at all</strong>. Studying requires no network.</li>
   <li>The app's network layer is a <strong>local mock implementation</strong> containing no real network calls (no HTTP requests, no WebSockets).</li>
   <li>The interface is rendered in an embedded <code>WKWebView</code> whose content is read from inside the app bundle through a <strong>custom local resource scheme</strong>. That WebView <strong>loads only local content from inside the app bundle</strong> — no external URL is ever opened inside the app. http/https links (such as the full text of this privacy policy) are handed to the system browser instead; every other scheme is refused. The app itself provides no way to browse the internet.</li>
-  <li>The app requests <strong>no</strong> microphone, camera, contacts, calendar, location, photo library or health permissions.</li>
+  <li>The app requests two permissions — <strong>microphone and speech recognition</strong> — used solely for the pronunciation-scoring feature (see section 3). It requests <strong>no</strong> camera, contacts, calendar, location, photo library or health permissions.</li>
 </ul>
 <div class="note">
   <p style="margin:0"><strong>One honest footnote:</strong> a default stylesheet shipped with the UI framework (uni-app) contains a decorative background-image reference to <code>cdn.dcloud.net.cn</code>. It is leftover framework boilerplate, carries <strong>no user data whatsoever</strong>, and simply fails silently when offline with no effect on functionality. We list it because the claim "fully offline" should survive a packet capture.</p>
 </div>
 
-<h2>3. Pronunciation does not need a microphone</h2>
-<p>The "pronounce / read aloud" feature <strong>plays audio</strong>; it does not record. Every pronunciation is generated on your device by the iOS built-in <strong>speech synthesis</strong> (text-to-speech) service; the app bundle contains no pre-recorded audio files. The feature only produces sound and <strong>captures no audio input</strong>. The app therefore neither requests nor needs microphone access, and contains no pronunciation-scoring or voice-comparison feature.</p>
+<h2>3. Pronunciation and read-aloud scoring: audio stays on your device</h2>
+<p>The <strong>pronounce / read aloud</strong> feature plays audio: every pronunciation is generated on your device by the iOS built-in <strong>speech synthesis</strong> (text-to-speech) service; the app bundle contains no pre-recorded audio files, and this feature captures no audio input.</p>
+<p><strong>Pronunciation scoring</strong> uses the microphone, under these rules:</p>
+<ul>
+  <li>Recording starts only when you actively tap the "read aloud" button, and stops automatically when you finish (you can also stop it manually).</li>
+  <li>The recording is fed only into iOS <strong>on-device speech recognition</strong> (a system capability, forced into on-device mode) and <strong>never goes online</strong>; once recognition finishes the recording is discarded — <strong>never written to disk, never uploaded</strong> — and the developer has no way to obtain it.</li>
+  <li>Word-by-word comparison and scoring likewise happen entirely on the device.</li>
+  <li>If your device does not support on-device speech recognition, the feature hides itself — the app will <strong>not</strong> fall back to online recognition.</li>
+</ul>
 
 <h2>4. Data stored on your device</h2>
 <p>The following is kept only in local device storage (the WebView's local storage). It is never uploaded or synced, and the developer has no way to obtain it:</p>
