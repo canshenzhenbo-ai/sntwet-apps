@@ -83,19 +83,18 @@
 <p>下表为本应用当前版本会<strong>实际发起网络请求</strong>的全部主机（截至 2026-08-18，逐一核对源码得出）：</p>
 <table>
   <tr><th>数据服务方</th><th>请求主机</th><th>用途</th></tr>
-  <tr><td>新浪财经<br>Sina Finance</td><td><code>hq.sinajs.cn</code><br><code>vip.stock.finance.sina.com.cn</code><br><code>stock.finance.sina.com.cn</code><br><code>stock2.finance.sina.com.cn</code><br><code>quotes.sina.cn</code></td><td>A 股／港股／美股延时报价、板块列表、期货日线、A 股财务指标</td></tr>
-  <tr><td>腾讯财经<br>Tencent Finance</td><td><code>ifzq.gtimg.cn</code><br><code>web.ifzq.gtimg.cn</code></td><td>K 线历史与分时数据</td></tr>
+  <tr><td>新浪财经<br>Sina Finance</td><td><code>vip.stock.finance.sina.com.cn</code><br><code>stock.finance.sina.com.cn</code><br><code>stock2.finance.sina.com.cn</code><br><code>quotes.sina.cn</code></td><td>A 股／港股／美股延时报价、板块列表、期货日线、A 股财务指标</td></tr>
+  <tr><td>腾讯财经<br>Tencent Finance</td><td><code>ifzq.gtimg.cn</code><br><code>web.ifzq.gtimg.cn</code><br><code>qt.gtimg.cn</code></td><td>K 线历史与分时数据；A股·港股·美股延时报价</td></tr>
   <tr><td>东方财富<br>East Money</td><td><code>push2delay.eastmoney.com</code><br><code>searchapi.eastmoney.com</code><br><code>datacenter.eastmoney.com</code></td><td>延时行情、代码搜索建议、港股财务指标</td></tr>
   <tr><td>Yahoo Finance</td><td><code>query1.finance.yahoo.com</code><br><code>query2.finance.yahoo.com</code></td><td>美股报价与历史 K 线</td></tr>
   <tr><td>StockAnalysis.com</td><td><code>stockanalysis.com</code></td><td>美股财务与估值指标</td></tr>
-  <tr><td>百度股市通<br>Baidu Gushitong</td><td><code>gushitong.baidu.com</code></td><td>A 股与港股的估值历史分位（PE／PB 百分位）</td></tr>
+  <tr><td>百度股市通<br>Baidu Gushitong</td><td><code>gushitong.baidu.com</code><br><code>finance.baidu.com</code></td><td>A 股与港股的估值历史分位（PE／PB 百分位）</td></tr>
   <tr><td>Cboe</td><td><code>cdn.cboe.com</code></td><td>美股期权链延时报价（未平仓量、成交量、隐含波动率）</td></tr>
-  <tr><td>Nasdaq</td><td><code>api.nasdaq.com</code></td><td>财报日历</td></tr>
-  <tr><td>NYSE</td><td><code>www.nyse.com</code></td><td>交易暂停（trade halts）公告</td></tr>
-  <tr><td>U.S. Department of the Treasury</td><td><code>home.treasury.gov</code></td><td>美国国债收益率曲线</td></tr>
-  <tr><td>CNN</td><td><code>production.dataviz.cnn.io</code></td><td>恐惧与贪婪指数</td></tr>
-  <tr><td>Binance</td><td><code>api.binance.com</code></td><td>比特币价格与日线（仅价格展示）</td></tr>
+    <tr><td>NYSE</td><td><code>www.nyse.com</code></td><td>交易暂停（trade halts）公告</td></tr>
+  <tr><td>FRED（圣路易斯联储）</td><td><code>fred.stlouisfed.org</code></td><td>美国国债收益率</td></tr>
+    <tr><td>Binance</td><td><code>api.binance.com</code></td><td>比特币价格与日线（仅价格展示）</td></tr>
 </table>
+<p>自 1.0 (13) 起，所有请求均以本 App 自身名义发出（User-Agent 标识 <code>SNTWET-MarketResearch</code>），不冒充浏览器，不发送 Referer/Origin 头。</p>
 <p>此外，应用内的图表界面由设备本机的一个<strong>回环（loopback）网页服务</strong>提供，地址为 <code>http://127.0.0.1</code>。该服务只在您的设备内部通信，不监听局域网、不接受外部连接，数据从不离开设备。</p>
 
 <div class="note">
@@ -150,19 +149,18 @@
 <p>The table below lists every host this version of the app <strong>actually sends network requests to</strong> (verified against the source code on 2026-08-18):</p>
 <table>
   <tr><th>Provider</th><th>Host</th><th>Purpose</th></tr>
-  <tr><td>Sina Finance</td><td><code>hq.sinajs.cn</code><br><code>vip.stock.finance.sina.com.cn</code><br><code>stock.finance.sina.com.cn</code><br><code>stock2.finance.sina.com.cn</code><br><code>quotes.sina.cn</code></td><td>Delayed quotes (A-shares, Hong Kong, US), sector lists, futures daily bars, A-share fundamentals</td></tr>
-  <tr><td>Tencent Finance</td><td><code>ifzq.gtimg.cn</code><br><code>web.ifzq.gtimg.cn</code></td><td>Historical and intraday candles</td></tr>
+  <tr><td>Sina Finance</td><td><code>vip.stock.finance.sina.com.cn</code><br><code>stock.finance.sina.com.cn</code><br><code>stock2.finance.sina.com.cn</code><br><code>quotes.sina.cn</code></td><td>Delayed quotes (A-shares, Hong Kong, US), sector lists, futures daily bars, A-share fundamentals</td></tr>
+  <tr><td>Tencent Finance</td><td><code>ifzq.gtimg.cn</code><br><code>web.ifzq.gtimg.cn</code><br><code>qt.gtimg.cn</code></td><td>Historical and intraday candles; delayed quotes (CN/HK/US)</td></tr>
   <tr><td>East Money</td><td><code>push2delay.eastmoney.com</code><br><code>searchapi.eastmoney.com</code><br><code>datacenter.eastmoney.com</code></td><td>Delayed quotes, symbol search suggestions, HK fundamentals</td></tr>
   <tr><td>Yahoo Finance</td><td><code>query1.finance.yahoo.com</code><br><code>query2.finance.yahoo.com</code></td><td>US quotes and historical candles</td></tr>
   <tr><td>StockAnalysis.com</td><td><code>stockanalysis.com</code></td><td>US fundamentals and valuation metrics</td></tr>
-  <tr><td>Baidu Gushitong</td><td><code>gushitong.baidu.com</code></td><td>Valuation history percentiles (PE/PB) for A-shares and Hong Kong stocks</td></tr>
+  <tr><td>Baidu Gushitong</td><td><code>gushitong.baidu.com</code><br><code>finance.baidu.com</code></td><td>Valuation history percentiles (PE/PB) for A-shares and Hong Kong stocks</td></tr>
   <tr><td>Cboe</td><td><code>cdn.cboe.com</code></td><td>Delayed US options chain quotes (open interest, volume, implied volatility)</td></tr>
-  <tr><td>Nasdaq</td><td><code>api.nasdaq.com</code></td><td>Earnings calendar</td></tr>
-  <tr><td>NYSE</td><td><code>www.nyse.com</code></td><td>Trade-halt notices</td></tr>
-  <tr><td>U.S. Department of the Treasury</td><td><code>home.treasury.gov</code></td><td>Treasury yield curve</td></tr>
-  <tr><td>CNN</td><td><code>production.dataviz.cnn.io</code></td><td>Fear &amp; Greed Index</td></tr>
-  <tr><td>Binance</td><td><code>api.binance.com</code></td><td>Bitcoin price and daily bars (price display only)</td></tr>
+    <tr><td>NYSE</td><td><code>www.nyse.com</code></td><td>Trade-halt notices</td></tr>
+  <tr><td>FRED (Federal Reserve Bank of St. Louis)</td><td><code>fred.stlouisfed.org</code></td><td>U.S. Treasury yields</td></tr>
+    <tr><td>Binance</td><td><code>api.binance.com</code></td><td>Bitcoin price and daily bars (price display only)</td></tr>
 </table>
+<p>Since 1.0 (13), every request identifies the app truthfully (User-Agent <code>SNTWET-MarketResearch</code>); the app never impersonates a browser and never sends Referer/Origin headers.</p>
 <p>In addition, the charting interface is served by a <strong>loopback web server running inside the app on the device itself</strong>, at <code>http://127.0.0.1</code>. It communicates only within your device, does not listen on the local network, accepts no external connections, and no data leaves the device through it.</p>
 
 <div class="note">
