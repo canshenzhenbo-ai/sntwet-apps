@@ -91,10 +91,11 @@
   <tr><td>百度股市通<br>Baidu Gushitong</td><td><code>gushitong.baidu.com</code><br><code>finance.baidu.com</code></td><td>A 股与港股的估值历史分位（PE／PB 百分位）</td></tr>
   <tr><td>Cboe</td><td><code>cdn.cboe.com</code></td><td>美股期权链延时报价（未平仓量、成交量、隐含波动率）</td></tr>
     <tr><td>NYSE</td><td><code>www.nyse.com</code></td><td>交易暂停（trade halts）公告</td></tr>
+  <tr><td>美国证券交易委员会 EDGAR<br>U.S. SEC EDGAR</td><td><code>www.sec.gov</code><br><code>data.sec.gov</code></td><td>美股公司重大事件备案（8-K）的日期与类型；只读取日期与表格类型，不下载备案正文</td></tr>
   <tr><td>FRED（圣路易斯联储）</td><td><code>fred.stlouisfed.org</code></td><td>美国国债收益率</td></tr>
     <tr><td>Binance</td><td><code>api.binance.com</code></td><td>比特币价格与日线（仅价格展示）</td></tr>
 </table>
-<p>自 1.0 (13) 起，所有请求均以本 App 自身名义发出（User-Agent 标识 <code>SNTWET-MarketResearch</code>），不冒充浏览器，不发送 Referer/Origin 头。</p>
+<p>自 1.0 (13) 起，所有请求均以本 App 自身名义发出（User-Agent 标识 <code>SNTWET-MarketResearch</code>，并附本项目的联系邮箱），不冒充浏览器，不发送 Referer/Origin 头。</p>
 <p>此外，应用内的图表界面由设备本机的一个<strong>回环（loopback）网页服务</strong>提供，地址为 <code>http://127.0.0.1</code>。该服务只在您的设备内部通信，不监听局域网、不接受外部连接，数据从不离开设备。</p>
 
 <div class="note">
@@ -157,10 +158,11 @@
   <tr><td>Baidu Gushitong</td><td><code>gushitong.baidu.com</code><br><code>finance.baidu.com</code></td><td>Valuation history percentiles (PE/PB) for A-shares and Hong Kong stocks</td></tr>
   <tr><td>Cboe</td><td><code>cdn.cboe.com</code></td><td>Delayed US options chain quotes (open interest, volume, implied volatility)</td></tr>
     <tr><td>NYSE</td><td><code>www.nyse.com</code></td><td>Trade-halt notices</td></tr>
+  <tr><td>U.S. SEC EDGAR</td><td><code>www.sec.gov</code><br><code>data.sec.gov</code></td><td>Dates and form types of U.S. company event filings (8-K); only the date and form type are read, filing documents are not downloaded</td></tr>
   <tr><td>FRED (Federal Reserve Bank of St. Louis)</td><td><code>fred.stlouisfed.org</code></td><td>U.S. Treasury yields</td></tr>
     <tr><td>Binance</td><td><code>api.binance.com</code></td><td>Bitcoin price and daily bars (price display only)</td></tr>
 </table>
-<p>Since 1.0 (13), every request identifies the app truthfully (User-Agent <code>SNTWET-MarketResearch</code>); the app never impersonates a browser and never sends Referer/Origin headers.</p>
+<p>Since 1.0 (13), every request identifies the app truthfully (User-Agent <code>SNTWET-MarketResearch</code>, together with the project contact e-mail); the app never impersonates a browser and never sends Referer/Origin headers.</p>
 <p>In addition, the charting interface is served by a <strong>loopback web server running inside the app on the device itself</strong>, at <code>http://127.0.0.1</code>. It communicates only within your device, does not listen on the local network, accepts no external connections, and no data leaves the device through it.</p>
 
 <div class="note">
